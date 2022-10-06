@@ -10,6 +10,8 @@ export const styles = StyleSheet.create({
         backgroundColor: THEME.COLORS.PRIMARY,
         borderRadius: 8,
         overflow: 'hidden',
+
+        ...THEME.MIXINS.SHADOW_1,
     },
     cardHeader: {
         flexDirection: 'row',
