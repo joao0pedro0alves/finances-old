@@ -11,13 +11,15 @@ const DEFAULT_THEME = {
         CAPTION_300: "#AFAFAF",
 
         SHAPE: "#2A2634",
+        DIVIDER: "#EFEFEF",
 
         PRIMARY: "#031A6E",
         SUCCESS: "#34AA44",
         ALERT: "#E6492D",
 
         FOOTER: ["rgba(0,0,0,0)", "rgba(0,0,0,0.9)"],
-        OVERLAY: "rgba(0,0,0,0.6)",
+        OVERLAY: "rgba(0,0,0,0.05)",
+        PRIMARY_OVERLAY: "rgba(3, 26, 110, 0.1)",
     },
 
     FONT_FAMILY: {
@@ -29,6 +31,7 @@ const DEFAULT_THEME = {
     },
 
     FONT_SIZE: {
+        XS: 12,
         SM: 14,
         MD: 16,
         LG: 24,
@@ -37,14 +40,13 @@ const DEFAULT_THEME = {
 
 const MIXINS = StyleSheet.create({
     SHADOW_1: {
+        shadowColor: DEFAULT_THEME.COLORS.OVERLAY,
         shadowOffset: {
             width: 0,
-            height: 2,
+            height: 5,
         },
-        shadowOpacity: 0.25,
-        shadowRadius: 4,
-        elevation: 5,
-        shadowColor: DEFAULT_THEME.COLORS.BLACK,
+        shadowRadius: 30,
+        elevation: 30,
     },
     OVERLAY: {
         flex: 1,

@@ -4,7 +4,8 @@ import { FontAwesome } from "@expo/vector-icons"
 import { styles } from "./styles"
 import { THEME } from "../../theme"
 
-import { Cards } from "../../components/Cards"
+import { CardList } from "../../components/CardList"
+import { TransactionList } from "../../components/TransactionList"
 
 const AVATAR_URL =
     "https://lh3.googleusercontent.com/a/ALm5wu38aAP6g2PkFVzpxiChguFyURQJgVdj9WL-Zmj04Q=s288-p-rw-no"
@@ -40,7 +41,11 @@ export function Home() {
                     </View>
                 </View>
 
-                <Cards />
+                <CardList />
+            </View>
+
+            <View>
+                <TransactionList />
             </View>
 
         </View>
