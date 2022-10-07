@@ -1,31 +1,18 @@
-import { View, Text, TouchableOpacity } from "react-native"
+import { View, ViewProps} from "react-native"
 import { Transaction } from "../Transaction"
 
 import { styles } from "./styles"
 
-export function TransactionList() {
+interface TransactionListProps extends ViewProps {
+}
+
+export function TransactionList(props: TransactionListProps) {
     return (
-        <View style={styles.container}>
-
-            <View style={styles.header}>
-                <Text style={styles.title}>
-                    Recent Transactions
-                </Text>
-
-                <TouchableOpacity>
-                    <Text style={styles.link}>
-                        See all
-                    </Text>
-                </TouchableOpacity>
-            </View>
-
-            <View style={styles.listContainer}>
-                <Transaction />
-                <Transaction />
-                <Transaction />
-                <Transaction isLast />
-            </View>
-
+        <View style={styles.container} {...props}>
+            <Transaction />
+            <Transaction />
+            <Transaction />
+            <Transaction isLast />
         </View>
     )
 }

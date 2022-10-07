@@ -3,26 +3,6 @@ import { THEME } from "../../theme"
 
 export const styles = StyleSheet.create({
     container: {
-        padding: 24,
-    },
-
-    header: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center'
-    },
-    title: {
-        fontFamily: THEME.FONT_FAMILY.BOLD,
-        fontSize: THEME.FONT_SIZE.SM,
-        color: THEME.COLORS.CAPTION_900
-    },
-    link: {
-        fontFamily: THEME.FONT_FAMILY.BOLD,
-        fontSize: THEME.FONT_SIZE.SM,
-        color: THEME.COLORS.PRIMARY
-    },
-
-    listContainer: {
         marginTop: 16,
         borderRadius: 8,
         overflow: 'hidden',

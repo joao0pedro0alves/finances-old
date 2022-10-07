@@ -1,4 +1,4 @@
-import { View, Text, Image } from "react-native"
+import { View, Text, Image, TouchableOpacity } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 
 import { FontAwesome } from "@expo/vector-icons"
@@ -46,7 +46,18 @@ export function Home() {
                 <CardList />
             </View>
 
-            <View>
+            <View style={styles.listContainer}>
+                <View style={styles.listHeader}>
+                    <Text style={styles.listTitle}>
+                        Recent Transactions
+                    </Text>
+
+                    <TouchableOpacity>
+                        <Text style={styles.listLink}>
+                            See all
+                        </Text>
+                    </TouchableOpacity>
+                </View>
                 <TransactionList />
             </View>
 

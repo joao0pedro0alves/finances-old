@@ -26,7 +26,6 @@ export const styles = StyleSheet.create({
         fontFamily: THEME.FONT_FAMILY.BOLD,
         fontSize: THEME.FONT_SIZE.MD,
     },
-
     headingTools: {
         flexDirection: "row",
         alignItems: "center",
@@ -58,4 +57,25 @@ export const styles = StyleSheet.create({
         width: 40,
         height: 40,
     },
+
+    // TRANSACTIONS
+    listContainer: {
+        padding: 24,
+    },
+    listHeader: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+    },
+    listTitle: {
+        fontFamily: THEME.FONT_FAMILY.BOLD,
+        fontSize: THEME.FONT_SIZE.SM,
+        color: THEME.COLORS.CAPTION_900
+    },
+    listLink: {
+        fontFamily: THEME.FONT_FAMILY.BOLD,
+        fontSize: THEME.FONT_SIZE.SM,
+        color: THEME.COLORS.PRIMARY
+    },
+
 })
