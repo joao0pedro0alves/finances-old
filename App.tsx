@@ -14,6 +14,7 @@ import { Loading } from "./src/components/Loading"
 
 import { Home } from "./src/screens/Home"
 import { Transactions } from "./src/screens/Transactions"
+import { Notifications } from "./src/screens/Notifications"
 
 export default function App() {
     const [fontsLoaded] = useFonts({
@@ -32,7 +33,7 @@ export default function App() {
                 translucent
             />
 
-            {fontsLoaded ? <Transactions /> : <Loading />}
+            {fontsLoaded ? <Notifications /> : <Loading />}
         </View>
     )
 }
