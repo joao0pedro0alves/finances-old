@@ -7,12 +7,10 @@ import { FontAwesome } from "@expo/vector-icons"
 
 import { styles } from "./styles"
 import { THEME } from "../../theme"
+import { AVATAR_URL } from "../../utils/profile"
 
 import { CardList } from "../../components/CardList"
 import { TransactionList } from "../../components/TransactionList"
-
-const AVATAR_URL =
-    "https://lh3.googleusercontent.com/a/ALm5wu38aAP6g2PkFVzpxiChguFyURQJgVdj9WL-Zmj04Q=s288-p-rw-no"
 
 const ANIMATION_DURATION = 1000 // 1 second
 

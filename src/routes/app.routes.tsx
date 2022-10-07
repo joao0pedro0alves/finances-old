@@ -6,7 +6,7 @@ import { TabBarIcon } from "../components/TabBarIcon"
 import { StackRoutes } from "./stack.routes"
 import { Transactions } from "../screens/Transactions"
 import { Cards } from "../screens/Cards"
-import { Notifications } from "../screens/Notifications"
+import { Profile } from "../screens/Profile"
 
 import { styles } from "./styles"
 
@@ -63,8 +63,10 @@ export function AppRoutes() {
             />
             <Screen
                 name="profile"
-                component={Notifications}
+                component={Profile}
                 options={{
+                    headerShown: true,
+                    title: 'Profile',
                     tabBarIcon: (props) => (
                         <TabBarIcon
                             {...props}
