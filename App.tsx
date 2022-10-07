@@ -1,7 +1,4 @@
-import { StatusBar } from "expo-status-bar"
-import { StyleSheet } from "react-native"
-import { SafeAreaView } from "react-native-safe-area-context"
-
+import { View, StatusBar, StyleSheet } from "react-native"
 import {
     useFonts,
     Inter_200ExtraLight,
@@ -14,7 +11,9 @@ import {
 import { THEME } from "./src/theme"
 
 import { Loading } from "./src/components/Loading"
+
 import { Home } from "./src/screens/Home"
+import { Transactions } from "./src/screens/Transactions"
 
 export default function App() {
     const [fontsLoaded] = useFonts({
@@ -26,10 +25,15 @@ export default function App() {
     })
 
     return (
-        <SafeAreaView style={styles.container}>
-            <StatusBar style="auto" />
-            {fontsLoaded ? <Home /> : <Loading />}
-        </SafeAreaView>
+        <View style={styles.container}>
+            <StatusBar
+                barStyle="dark-content"
+                backgroundColor="transparent"
+                translucent
+            />
+
+            {fontsLoaded ? <Transactions /> : <Loading />}
+        </View>
     )
 }
 

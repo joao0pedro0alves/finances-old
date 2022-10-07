@@ -1,4 +1,6 @@
 import { View, Text, Image } from "react-native"
+import { SafeAreaView } from "react-native-safe-area-context"
+
 import { FontAwesome } from "@expo/vector-icons"
 
 import { styles } from "./styles"
@@ -12,7 +14,7 @@ const AVATAR_URL =
 
 export function Home() {
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
 
             <View style={styles.header}>
                 <View style={styles.heading}>
@@ -48,6 +50,6 @@ export function Home() {
                 <TransactionList />
             </View>
 
-        </View>
+        </SafeAreaView>
     )
 }

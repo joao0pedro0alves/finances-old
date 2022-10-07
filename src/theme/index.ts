@@ -20,6 +20,7 @@ const DEFAULT_THEME = {
         FOOTER: ["rgba(0,0,0,0)", "rgba(0,0,0,0.9)"],
         OVERLAY: "rgba(0,0,0,0.05)",
         PRIMARY_OVERLAY: "rgba(3, 26, 110, 0.1)",
+        WHITE_OVERLAY: "rgba(255, 255, 255, 0.09)"
     },
 
     FONT_FAMILY: {
@@ -35,6 +36,7 @@ const DEFAULT_THEME = {
         SM: 14,
         MD: 16,
         LG: 24,
+        XL: 32
     },
 }
 
