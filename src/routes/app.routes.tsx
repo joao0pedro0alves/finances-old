@@ -1,13 +1,14 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { MaterialIcons, Ionicons } from "@expo/vector-icons"
 
-import { THEME } from "../theme"
-
 import { TabBarIcon } from "../components/TabBarIcon"
 
-import { Transactions } from "../screens/Transactions"
-import { Notifications } from "../screens/Notifications"
 import { StackRoutes } from "./stack.routes"
+import { Transactions } from "../screens/Transactions"
+import { Cards } from "../screens/Cards"
+import { Notifications } from "../screens/Notifications"
+
+import { styles } from "./styles"
 
 const { Navigator, Screen } = createBottomTabNavigator()
 
@@ -18,18 +19,8 @@ export function AppRoutes() {
             screenOptions={{
                 headerShown: false,
                 tabBarShowLabel: false,
-                tabBarStyle: {
-                    borderTopColor: "transparent",
-                    backgroundColor: THEME.COLORS.BACKGROUND_PAPER,
-                    shadowColor: "rgba(0, 0, 0, 0.07)",
-                    shadowOffset: {
-                        width: 0,
-                        height: 0,
-                    },
-                    shadowRadius: 30,
-                    shadowOpacity: 0.07,
-                    elevation: 30,
-                },
+                headerTitleStyle: styles.headerTitleStyle,
+                tabBarStyle: styles.tabBarStyle,
             }}
         >
             <Screen
@@ -58,8 +49,10 @@ export function AppRoutes() {
             />
             <Screen
                 name="cards"
-                component={Notifications}
+                component={Cards}
                 options={{
+                    headerShown: true,
+                    title: 'My Cards',
                     tabBarIcon: (props) => (
                         <TabBarIcon
                             {...props}

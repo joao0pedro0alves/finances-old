@@ -1,4 +1,4 @@
-import { View, Text, Image } from "react-native"
+import { View, ViewProps, Text, Image } from "react-native"
 import { Feather } from "@expo/vector-icons"
 
 import paypal from "../../../assets/app/paypal-logo.png"
@@ -8,9 +8,13 @@ import cardVector from "../../../assets/app/card-vector.png"
 import { styles } from "./styles"
 import { THEME } from "../../theme"
 
-export function Card() {
+interface Card extends ViewProps {
+
+}
+
+export function Card({style, ...props}: ViewProps) {
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, style]} {...props}>
             <View style={styles.cardHeader}>
                 <View>
                     <Text style={styles.title}>Balance</Text>

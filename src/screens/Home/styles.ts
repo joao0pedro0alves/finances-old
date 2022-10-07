@@ -38,13 +38,14 @@ export const styles = StyleSheet.create({
         backgroundColor: THEME.COLORS.ALERT,
         borderColor: THEME.COLORS.TEXT,
         borderWidth: 1,
-        zIndex: 2,
+
         position: "absolute",
         right: 0,
-
+        
         height: 12,
         width: 12,
         borderRadius: 6,
+        zIndex: 2,
     },
     bell: {
         zIndex: 1,
