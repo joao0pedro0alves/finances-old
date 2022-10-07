@@ -61,6 +61,7 @@ export const styles = StyleSheet.create({
 
     // TRANSACTIONS
     listContainer: {
+        flex: 1,
         padding: 24,
     },
     listHeader: {

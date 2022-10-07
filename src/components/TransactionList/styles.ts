@@ -3,9 +3,9 @@ import { THEME } from "../../theme"
 
 export const styles = StyleSheet.create({
     container: {
+        flex: 1,
         marginTop: 16,
         borderRadius: 8,
-        overflow: 'hidden',
         
         backgroundColor: THEME.COLORS.BACKGROUND_PAPER,
         shadowColor: THEME.COLORS.OVERLAY,

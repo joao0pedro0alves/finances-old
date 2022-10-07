@@ -1,13 +1,13 @@
-import { useRef, useEffect } from "react"
+import { useRef, useEffect, useState } from "react"
 import { View, Animated, Text, Image, TouchableOpacity } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { useNavigation } from "@react-navigation/native"
-
 import { FontAwesome } from "@expo/vector-icons"
 
 import { styles } from "./styles"
 import { THEME } from "../../theme"
 import { AVATAR_URL } from "../../utils/profile"
+import { transactions as mockTransactions } from "../../utils/transactions"
 
 import { CardList } from "../../components/CardList"
 import { TransactionList } from "../../components/TransactionList"
@@ -15,6 +15,14 @@ import { TransactionList } from "../../components/TransactionList"
 const ANIMATION_DURATION = 1000 // 1 second
 
 export function Home() {
+    const [recentTransactions] = useState(() => {
+        const sorted = mockTransactions.sort((a, b) => {
+            return a.issuedAt.getTime() - b.issuedAt.getTime()
+        })
+
+        return sorted.slice(0, 4)
+    })
+
     const badgeAnim = useRef(new Animated.Value(0)).current // Initial value for dimensions: 0
     const navigation = useNavigation()
 
@@ -77,7 +85,10 @@ export function Home() {
                         <Text style={styles.listLink}>See all</Text>
                     </TouchableOpacity>
                 </View>
-                <TransactionList />
+
+                <TransactionList 
+                    data={recentTransactions}
+                />
             </View>
         </SafeAreaView>
     )
