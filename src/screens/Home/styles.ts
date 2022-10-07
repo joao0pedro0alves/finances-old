@@ -30,7 +30,7 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
     },
-    headingNotification: {
+    notificationButton: {
         position: "relative",
         marginRight: 16,
     },

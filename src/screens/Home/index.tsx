@@ -1,5 +1,6 @@
 import { View, Text, Image, TouchableOpacity } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
+import { useNavigation } from "@react-navigation/native"
 
 import { FontAwesome } from "@expo/vector-icons"
 
@@ -13,6 +14,9 @@ const AVATAR_URL =
     "https://lh3.googleusercontent.com/a/ALm5wu38aAP6g2PkFVzpxiChguFyURQJgVdj9WL-Zmj04Q=s288-p-rw-no"
 
 export function Home() {
+
+    const navigation = useNavigation()
+
     return (
         <SafeAreaView style={styles.container}>
 
@@ -24,7 +28,8 @@ export function Home() {
                     </View>
 
                     <View style={styles.headingTools}>
-                        <View style={styles.headingNotification}>
+
+                        <TouchableOpacity onPress={() => navigation.navigate('notifications')} style={styles.notificationButton}>
                             <View style={styles.badge} />
                             <FontAwesome
                                 name="bell"
@@ -32,7 +37,7 @@ export function Home() {
                                 size={THEME.FONT_SIZE.LG}
                                 color={THEME.COLORS.CAPTION_300}
                             />
-                        </View>
+                        </TouchableOpacity>
 
                         <View style={styles.avatar}>
                             <Image
@@ -52,7 +57,7 @@ export function Home() {
                         Recent Transactions
                     </Text>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('transactions')}>
                         <Text style={styles.listLink}>
                             See all
                         </Text>

@@ -1,20 +1,15 @@
-import { ImageBackground, StatusBar, View, TouchableOpacity, Text } from "react-native"
+import { ImageBackground, View, TouchableOpacity, Text } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { FontAwesome, Ionicons } from "@expo/vector-icons"
 
 import bgWaves from "../../../assets/app/bg-waves.png"
-import { THEME } from "../../theme"
 
+import { THEME } from "../../theme"
 import { styles } from "./styles"
 
 export function BalanceHeading() {
     return (
         <SafeAreaView style={styles.overlay}>
-            <StatusBar
-                barStyle="light-content"
-                backgroundColor="transparent"
-                translucent
-            />
 
             <ImageBackground
                 source={bgWaves}

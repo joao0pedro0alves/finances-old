@@ -9,9 +9,10 @@ const DEFAULT_THEME = {
 
         CAPTION_900: "#222222",
         CAPTION_300: "#AFAFAF",
-
+        
         SHAPE: "#2A2634",
         DIVIDER: "#EFEFEF",
+        DISABLED: "#CBCBDD",
 
         PRIMARY: "#031A6E",
         SUCCESS: "#34AA44",
