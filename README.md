@@ -10,10 +10,6 @@
 # Sobre o projeto :book:
 Controle seu orçamento de uma forma mais simples e prática
 
-<div>
-  <video src='https://user-images.githubusercontent.com/78969510/194917288-93725789-ebc3-4531-8fdd-ee7b2e586477.mp4' width=240 />
-</p>
-
 ## Tecnologias :gear:
 
 Este projeto foi desenvolvido com as seguintes tecnologias:
@@ -27,6 +23,10 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 ## Status :arrow_up:
 
 EM DESENVOLVIMENTO
+
+<div width=240>
+  <video src='https://user-images.githubusercontent.com/78969510/194917288-93725789-ebc3-4531-8fdd-ee7b2e586477.mp4' width=240 />
+</div>
 
 ### Condição prévia :pushpin:
 
