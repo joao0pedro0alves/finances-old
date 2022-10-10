@@ -41,7 +41,7 @@ export const styles = StyleSheet.create({
         fontFamily: THEME.FONT_FAMILY.BOLD,
         fontSize: THEME.FONT_SIZE.LG
     },
-    paypal: {
+    logo: {
         width: 60,
         height: 30
     },

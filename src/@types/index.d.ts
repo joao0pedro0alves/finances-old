@@ -1,3 +1,10 @@
+import { ColorValue } from "react-native"
+
+export type OptionType = {
+    value: string
+    label: string
+}
+
 export type IconType =
     | "AntDesign"
     | "Entypo"
@@ -24,4 +31,14 @@ export interface Transaction {
         name: string
         type: IconType
     }
+}
+
+export interface Card {
+    id: string
+    title: string
+    createdAt: Date
+    budgetValue: number
+    secondary?: string
+    color?: ColorValue
+    flag?: any
 }

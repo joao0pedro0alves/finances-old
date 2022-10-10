@@ -1,24 +1,37 @@
 import { View, ViewProps, Text, Image } from "react-native"
 import { Feather } from "@expo/vector-icons"
+import moment from "moment"
 
-import paypal from "../../../assets/app/paypal-logo.png"
 import ellipse from "../../../assets/app/ellipse.png"
 import cardVector from "../../../assets/app/card-vector.png"
+import { Card as CardType } from "../../@types"
 
 import { styles } from "./styles"
 import { THEME } from "../../theme"
+import { formatCurrency } from "../../utils/format-currency"
 
-interface Card extends ViewProps {
-
+interface CardProps extends ViewProps {
+    data: CardType
 }
 
-export function Card({style, ...props}: ViewProps) {
+export function Card({ data, style, ...props }: CardProps) {
+    const formattedCreatedAt = moment(data?.createdAt).format(
+        "dddd, D MMM YYYY"
+    )
+
     return (
-        <View style={[styles.container, style]} {...props}>
+        <View
+            style={[
+                styles.container,
+                style,
+                data.color ? { backgroundColor: data.color } : {},
+            ]}
+            {...props}
+        >
             <View style={styles.cardHeader}>
                 <View>
-                    <Text style={styles.title}>Balance</Text>
-                    <Text style={styles.subtitle}>Today, 08 Sept 2019</Text>
+                    <Text style={styles.title}>{data?.title}</Text>
+                    <Text style={styles.subtitle}>{formattedCreatedAt}</Text>
                 </View>
 
                 <View>
@@ -32,13 +45,13 @@ export function Card({style, ...props}: ViewProps) {
 
             <View style={styles.cardBody}>
                 <View>
-                    <Text style={styles.balance}>$ 6,240.00</Text>
-                    <Text style={styles.subtitle}>
-                        up by 2% from last month
+                    <Text style={styles.balance}>
+                        {formatCurrency(data?.budgetValue)}
                     </Text>
+                    <Text style={styles.subtitle}>{data?.secondary}</Text>
                 </View>
 
-                <Image style={styles.paypal} source={paypal} />
+                {data.flag && <Image style={styles.logo} source={data.flag} />}
                 <Image style={styles.ellipse} source={ellipse} />
                 <Image style={styles.cardVector} source={cardVector} />
             </View>
