@@ -24,6 +24,10 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 EM DESENVOLVIMENTO
 
+<div width=240>
+  <video src='https://user-images.githubusercontent.com/78969510/194917288-93725789-ebc3-4531-8fdd-ee7b2e586477.mp4' width=240 />
+</div>
+
 ### Condição prévia :pushpin:
 
 Você precisa ter instalado:
