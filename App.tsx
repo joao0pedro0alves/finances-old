@@ -8,6 +8,8 @@ import {
     Inter_900Black,
 } from "@expo-google-fonts/inter"
 
+import 'moment/locale/pt-br'
+
 import { THEME } from "./src/theme"
 
 import { Loading } from "./src/components/Loading"

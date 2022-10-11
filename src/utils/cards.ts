@@ -7,18 +7,17 @@ export const cards: Card[] = [
         id: uniqueId(),
         budgetValue: 2004,
         createdAt: new Date(),
-        title: "Balance",
+        title: "Banco do Brasil",
         secondary: "up by 2% from last month",
-        color: CARDS_CONFIG.PAYPAL.COLOR,
-        flag: CARDS_CONFIG.PAYPAL.LOGO
+        color: CARDS_CONFIG.BB.COLOR,
     },
     {
         id: uniqueId(),
-        budgetValue: 4.50,
+        budgetValue: 450,
         createdAt: new Date('2022-12-01'),
         title: "Nubank",
         secondary: "up by 10% from last month",
         color: CARDS_CONFIG.NUBANK.COLOR,
-        flag: CARDS_CONFIG.NUBANK.LOGO
+        flag: CARDS_CONFIG.NUBANK.FLAG
     },
 ]

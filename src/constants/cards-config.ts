@@ -1,13 +1,16 @@
-import nubank from "../../assets/app/nubank-logo.png"
-import paypal from "../../assets/app/paypal-logo.png"
+import nubank from "../../assets/app/banks/nubank-logo.png"
+import paypal from "../../assets/app/banks/paypal-logo.png"
 
 export const CARDS_CONFIG = {
     PAYPAL: {
         COLOR: '#003087',
-        LOGO: paypal,
+        FLAG: paypal,
     },
     NUBANK: {
         COLOR: '#820AD1',
-        LOGO: nubank,
+        FLAG: nubank,
+    },
+    BB: {
+        COLOR: '#00569F',
     }
 }

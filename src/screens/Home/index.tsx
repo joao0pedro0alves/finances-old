@@ -39,7 +39,7 @@ export function Home() {
             <View style={styles.header}>
                 <View style={styles.heading}>
                     <View>
-                        <Text style={styles.welcomeText}>Welcome back,</Text>
+                        <Text style={styles.welcomeText}>Bem vindo,</Text>
                         <Text style={styles.usernameText}>João Pedro</Text>
                     </View>
 
@@ -63,12 +63,15 @@ export function Home() {
                             />
                         </TouchableOpacity>
 
-                        <View style={styles.avatar}>
+                        <TouchableOpacity 
+                            onPress={() => navigation.navigate("profile")}
+                            style={styles.avatar}
+                        >
                             <Image
                                 source={{ uri: AVATAR_URL }}
                                 style={styles.avatarImage}
                             />
-                        </View>
+                        </TouchableOpacity>
                     </View>
                 </View>
 
