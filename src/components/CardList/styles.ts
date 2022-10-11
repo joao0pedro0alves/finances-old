@@ -12,10 +12,10 @@ export const styles = StyleSheet.create({
     card: {
         shadowColor: "rgba(0,0,0,0.5)",
         minWidth: Dimensions.get('screen').width - 48,
-        paddingHorizontal: 1
     },
-    contentList: {},
-    emptyListText: {},
+    separator: {
+        marginLeft: 10,
+    },
 
     controls: {
         marginTop: 22,
@@ -28,7 +28,7 @@ export const styles = StyleSheet.create({
         height: 5,
         borderRadius: 2.5,
         backgroundColor: THEME.COLORS.PRIMARY_OVERLAY,
-        marginHorizontal: 5
+        marginHorizontal: 5,
     },
     controlActive: {
         backgroundColor: THEME.COLORS.PRIMARY,

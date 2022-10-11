@@ -80,12 +80,12 @@ export function Home() {
 
             <View style={styles.listContainer}>
                 <View style={styles.listHeader}>
-                    <Text style={styles.listTitle}>Recent Transactions</Text>
+                    <Text style={styles.listTitle}>Transações Recentes</Text>
 
                     <TouchableOpacity
                         onPress={() => navigation.navigate("transactions")}
                     >
-                        <Text style={styles.listLink}>See all</Text>
+                        <Text style={styles.listLink}>Todas</Text>
                     </TouchableOpacity>
                 </View>
 

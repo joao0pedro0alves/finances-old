@@ -1,19 +1,34 @@
-import { View, FlatList, Pressable } from "react-native"
+import { useState } from "react"
+import { View, FlatList, Pressable, TouchableHighlight } from "react-native"
 
 import { cards } from "../../utils/cards"
+import { Card as CardType } from "../../@types"
 
 import { Card } from "../Card"
 import { styles } from "./styles"
 
 export function CardList() {
+    const [activeCard, setActiveCard] = useState<CardType>(cards[0])
+
+    const setCard = (card: CardType) => {
+        setActiveCard(card)
+    }
+
     return (
         <View style={styles.container}>
             <FlatList
                 data={cards}
                 keyExtractor={(item) => item.id}
                 horizontal
-                renderItem={({ item }) => (
-                    <View style={styles.card}>
+                renderItem={({ item, separators }) => (
+                    <TouchableHighlight
+                        onHideUnderlay={() => {
+                            setCard(item)
+                            separators.unhighlight()
+                        }}
+                        style={styles.card}
+                        onPress={() => {}}
+                    >
                         <Card
                             data={{
                                 id: item.id,
@@ -22,17 +37,33 @@ export function CardList() {
                                 budgetValue: item.budgetValue,
                                 createdAt: item.createdAt,
                                 color: item.color,
-                                flag: item.flag
+                                flag: item.flag,
                             }}
                         />
-                    </View>
+                    </TouchableHighlight>
+                )}
+                ItemSeparatorComponent={({ highlighted }) => (
+                    <View
+                        style={[
+                            styles.separator,
+                            highlighted && { marginLeft: 0, marginRight: 0 },
+                        ]}
+                    />
                 )}
             />
 
             <View style={styles.controls}>
-                {cards.map((card, index) => 
-                    <Pressable key={card.id} style={[styles.control, index === 0 ? styles.controlActive : {}]} />
-                )}
+                {cards.map((card, index) => (
+                    <Pressable
+                        key={card.id}
+                        style={[
+                            styles.control,
+                            index === cards.indexOf(activeCard)
+                                ? styles.controlActive
+                                : {},
+                        ]}
+                    />
+                ))}
             </View>
         </View>
     )
