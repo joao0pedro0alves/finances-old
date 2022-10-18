@@ -39,7 +39,7 @@ export function Home() {
             <View style={styles.header}>
                 <View style={styles.heading}>
                     <View>
-                        <Text style={styles.welcomeText}>Bem vindo,</Text>
+                        <Text style={styles.welcomeText}>Welcome back,</Text>
                         <Text style={styles.usernameText}>João Pedro</Text>
                     </View>
 
@@ -80,12 +80,12 @@ export function Home() {
 
             <View style={styles.listContainer}>
                 <View style={styles.listHeader}>
-                    <Text style={styles.listTitle}>Transações Recentes</Text>
+                    <Text style={styles.listTitle}>Recent Transactions</Text>
 
                     <TouchableOpacity
                         onPress={() => navigation.navigate("transactions")}
                     >
-                        <Text style={styles.listLink}>Todas</Text>
+                        <Text style={styles.listLink}>See all</Text>
                     </TouchableOpacity>
                 </View>
 

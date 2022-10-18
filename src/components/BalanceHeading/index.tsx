@@ -3,6 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context"
 import { FontAwesome, Ionicons } from "@expo/vector-icons"
 
 import bgWaves from "../../../assets/app/bg-waves.png"
+import { formatCurrency } from "../../utils/format-currency"
 
 import { THEME } from "../../theme"
 import { styles } from "./styles"
@@ -33,7 +34,7 @@ export function BalanceHeading() {
                                     Active Total Balance
                                 </Text>
                                 <Text style={styles.balanceValue}>
-                                    $8,420.00
+                                    {formatCurrency(2500)}
                                 </Text>
                             </View>
 

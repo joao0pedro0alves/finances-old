@@ -19,6 +19,7 @@ export function AppRoutes() {
             screenOptions={{
                 headerShown: false,
                 tabBarShowLabel: false,
+                headerStyle: styles.headerStyle,
                 headerTitleStyle: styles.headerTitleStyle,
                 tabBarStyle: styles.tabBarStyle,
             }}

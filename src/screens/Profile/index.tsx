@@ -38,7 +38,7 @@ export function Profile() {
                                         color={THEME.COLORS.PRIMARY}
                                     />
                                 </View>
-                                <Text style={styles.preferenceText}>3+</Text>
+                                <Text style={styles.preferenceText}>2</Text>
                             </View>
 
                             <View style={[styles.preference, {marginLeft: 8}]}>

@@ -8,7 +8,7 @@ import {
     Inter_900Black,
 } from "@expo-google-fonts/inter"
 
-import 'moment/locale/pt-br'
+// import 'moment/locale/pt-br'
 
 import { THEME } from "./src/theme"
 

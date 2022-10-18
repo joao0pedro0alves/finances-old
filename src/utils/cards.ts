@@ -5,15 +5,16 @@ import { CARDS_CONFIG } from "../constants/cards-config"
 export const cards: Card[] = [
     {
         id: uniqueId(),
-        budgetValue: 700,
+        budgetValue: 2500,
         createdAt: new Date(),
-        title: "Banco do Brasil",
+        title: "PayPal",
         secondary: "Orçamento outubro",
-        color: CARDS_CONFIG.BB.COLOR,
+        color: CARDS_CONFIG.PAYPAL.COLOR,
+        flag: CARDS_CONFIG.PAYPAL.FLAG
     },
     {
         id: uniqueId(),
-        budgetValue: 450,
+        budgetValue: 195.50,
         createdAt: new Date('2022-12-01'),
         title: "Nubank",
         secondary: "Orçamento outubro",

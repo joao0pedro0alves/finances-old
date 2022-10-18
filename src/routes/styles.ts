@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native"
 import { THEME } from "../theme"
 
 export const styles = StyleSheet.create({
+    headerStyle: {},
     headerTitleStyle: {
         color: THEME.COLORS.CAPTION_900,
         fontFamily: THEME.FONT_FAMILY.BOLD,
